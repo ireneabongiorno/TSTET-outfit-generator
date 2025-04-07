@@ -135,6 +135,10 @@ body {
 }
 
 /* ERAS MENU */
+.tabMenu {
+    padding-left: 0 !important;
+}
+
 .tabMenu .nav-pills .nav-link img {
     max-width: 200px;
 }
@@ -160,16 +164,15 @@ body {
 
 .tabContent .outfitsTabContent .tab-pane {
     overflow-y: auto;
-    height: 75vh;
-    padding: 25px;
+    height: 70vh;
+    padding: 15px;
 }
 
 /* PROGRESS BAR */
-.tabContent .outfitsTabContent .progress {
+.tabContent .progress {
     display: none;
-    --bs-progress-height: .7rem;
+    height: .75rem;
 }
-
 
 /* CARDS */
 .tabContent .outfitsTabContent .card {
@@ -378,25 +381,13 @@ body {
         display: none;
     }
 
-    .tabContent .outfitsTabContent .progress {
+    .tabContent .progress {
         display: flex;
     }
 
     .tabContent .outfitsTabContent .tab-pane {
         height: 61vh;
-        padding: 35px;
-        margin-top: 10px;
-    }
-
-    .tabContent .outfitsTabContent .tab-pane .row {
-        display: flex;
-        gap: 10px;
-    }
-
-    .tabContent .outfitsTabContent .tab-pane .col {
-        width: 48%;
-        padding: 0;
-        margin: 0;
+        padding: 25px 40px 45px 45px;
     }
 
     .tabContent .outfitsTabContent .col:hover .card,

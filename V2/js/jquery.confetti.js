@@ -92,7 +92,7 @@
 
         function InitializeConfetti() {
             document.getElementsByTagName('body')[0].style.background = "transparent";
-            document.getElementsByTagName('body')[0].style.backgroundColor = "white";
+            document.getElementsByTagName('body')[0].style.backgroundColor = "#ffffff";
             canvas.style.display = 'block';
             particles = [];
             animationComplete = false;
@@ -194,6 +194,8 @@
 
                 setTimeout(() => {
                     $("#confettiCanvas").remove();
+                    document.querySelector(".alert").classList.add("active", "show");
+                    document.querySelector(".btn-group.fade").classList.add("active", "show");
                 }, 500);
             }, animationDuration);
         }

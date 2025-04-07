@@ -1,7 +1,7 @@
 // Copyright: https://andrybong.me
 
 /***** VARIABLES GENERALES *****/
-document.addEventListener('contextmenu', event => event.preventDefault()); // Right click disabled
+//document.addEventListener('contextmenu', event => event.preventDefault()); // Right click disabled
 
 /***** BOX INTRO *****/
 
@@ -10,9 +10,9 @@ function introButton() {
     document.querySelector(".introTabContent").classList.add("d-none"); // Hide the intro
     document.querySelector(".tabMenuContent").classList.remove("d-none"); // Show the content
 }
-["firstLegOrder", "lastLegOrder"].forEach(erasLeg => {
-    document.getElementById(erasLeg).addEventListener("click", () => {
-        generateHTML(erasLeg === "firstLegOrder" ? "firstLegID" : "lastLegID");
+["firstLegOrder", "lastLegOrder"].forEach(erasLegButton => {
+    document.getElementById(erasLegButton).addEventListener("click", () => {
+        generateHTML(erasLegButton === "firstLegOrder" ? "firstLegID" : "lastLegID");
         introButton();
     });
 });
@@ -25,9 +25,13 @@ function introButton() {
 /* CARDS */
 function generateHTML(erasLeg) {
     // FILTER AND SORT DEPENDING ON THE LEG
-    let sortedEras = eras
-        .filter(era => era[erasLeg] !== undefined)
-        .sort((a, b) => Number(a[erasLeg]) - Number(b[erasLeg]));
+    let sortedEras = eras;
+    if (erasLeg === "firstLegID") {
+        let filteredEras = eras.filter(era => era.firstLegID !== undefined);
+        sortedEras = filteredEras.sort((a, b) => Number(a.firstLegID) - Number(b.firstLegID));
+    } else {
+        sortedEras = eras.sort((a, b) => Number(a.lastLegID) - Number(b.lastLegID));
+    }
 
     /* HTML CONTENT */
     sortedEras.forEach((era, i) => {
@@ -143,6 +147,7 @@ document.querySelector(".generateButton").addEventListener("click", () => {
     document.querySelector("header h1").classList.replace("text-white", "text-black");
     document.querySelector(".logo-white").style.display = "none";
     document.querySelector("header .logo-black").style.display = "inline";
+    document.querySelector("footer").classList.replace("text-white", "text-black")
     document.querySelector(".tabCanvas").classList.remove("d-none"); // Show the canvas
     document.querySelector(".tabMenuContent").classList.add("d-none"); // Hide the content
 });
@@ -152,7 +157,7 @@ document.querySelector(".generateButton").addEventListener("click", () => {
 
 /*** FINAL IMAGE ***/
 function finalImage(erasCardsImg, erasLeg) {
-    const myCanvas = document.getElementById("imgCanvas");
+    const myCanvas = document.querySelector(".imgCanvas");
     const myCanvasCtx = myCanvas.getContext("2d");
     myCanvas.width = 850;
     myCanvas.height = 450;
@@ -242,7 +247,7 @@ function finalImage(erasCardsImg, erasLeg) {
     });
 
     drawLogos(myCanvasCtx); // Logos
-    drawErasColors(myCanvasCtx, erasLeg); // Colors
+    drawErasColors(myCanvasCtx); // Colors
 }
 
 /* TOP AND BOTTOM LOGOS */
@@ -260,7 +265,7 @@ function drawLogos(myCanvasCtx) {
     myCanvasImgLogoTET.src = "img/logo-TET-black.png";
 }
 
-function drawErasColors(myCanvasCtx, erasLeg) {
+function drawErasColors(myCanvasCtx) {
     const erasColors = ['--ts-debut', '--ts-fearless', '--ts-speak-now', '--ts-red', '--ts-1989-2', '--ts-reputation', '--ts-lover', '--ts-folklore', '--ts-evermore', '--ts-midnights-2', '--ts-ttpd'];
     let width = 73;
     let x = 20;
@@ -276,7 +281,7 @@ function drawErasColors(myCanvasCtx, erasLeg) {
 
 
 /*** DOWNLOAD BUTTON ***/
-document.getElementById("downloadFinalImage").addEventListener("click", () => {
+document.querySelector(".downloadButton").addEventListener("click", () => {
     const link = document.createElement("a");
     link.download = "TSTheErasTour_AllOutfits.png";
     link.href = imgCanvas.toDataURL();

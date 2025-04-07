@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>TSTheErasTour Outfit Generator • Fan project (V2.1)</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>TSTheErasTour Outfit Generator • Fan project (V2.3)</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link href="css/styles.css?v=2.1" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -51,11 +54,8 @@
                         Because
                         eras may change, but the memories? They’re forever.<br /><br />
 
-                        Read the instructions and then click below to grab your piece of history!<br /><br /> 🩷 💛
-                        ❤️
-                        💜
-                        🖤 🩶 🤎
-                        🩵 🤍 💚 💙 </p>
+                        Read the instructions and then click below to grab your piece of history!<br /><br />💚 💛 💜 ❤️
+                        🩵 🖤 🩷 🩶 🤎 💙 🤍</p>
                 </div>
 
                 <div class="col-md-12 d-md-flex howToTabContent">
@@ -96,7 +96,7 @@
                                 If you have suggestions, an idea you'd like me to
                                 explore, or just want to say hello, please don’t hesitate to reach out. I'd love to hear
                                 from you! Your emails are always welcome ♡</p>
-                            <a href="mailto:admin@tstetoutfitgenerator.website" href="_blank"
+                            <a href="mailto:admin@tstetoutfitgenerator.website?subject=Oh, hi!" href="_blank"
                                 class="btn btn-outline-dark">Contact
                                 Me</a>
                         </div>
@@ -112,11 +112,12 @@
 
                 <!-- CONTENT ERAS -->
                 <div class="col-md-10 mb-4 tabContent">
+                    <!-- PROGRESS BAR -->
+                    <div class="progress rounded-0">
+                    </div>
+
                     <!-- CARDS -->
                     <div class="tab-content row outfitsTabContent">
-                        <!-- PROGRESS BAR -->
-                        <div class="progress">
-                        </div>
                     </div>
                 </div>
 
@@ -136,27 +137,26 @@
             <!-- CANVAS GENERATOR -->
             <div class="row col-md-12 py-5 px-3 mb-4 bg-white fade active show tabCanvas d-none">
                 <!-- FINAL IMAGE -->
-                <canvas id="imgCanvas" class="p-0" style="width: 100%; height: auto;">
+                <canvas class="p-0 imgCanvas" style="width: 100%; height: auto;">
                 </canvas>
 
                 <!-- DOWNLOAD BUTTON -->
-                <div class="alert alert-success mt-5" role="alert">
+                <div class="alert alert-success mt-5 fade" role="alert">
                     Thank you so much for using my web 🫶🏻 Click the Download button to save your image to
                     your
                     computer.</div>
 
-                <div class="btn-group d-flex align-items-center justify-content-center gap-2 mt-5" role="group"
-                    aria-label="Actions for your Eras Tour image">
+                <div class="btn-group d-flex align-items-center justify-content-center gap-2 flex-wrap mt-3 fade"
+                    role="group" aria-label="Actions for your Eras Tour image">
                     <button type="button" class="btn btn-outline-dark startOverButton"
                         onclick="window.open('index.html', '_self');">Start
-                        over</button><button type="button" id="downloadFinalImage"
-                        class="btn btn-dark downloadButton">Download your
+                        over</button><button type="button" class="btn btn-dark downloadButton">Download your
                         image</button>
                 </div>
             </div>
         </main>
 
-        <footer class="col-md-12 py-3 mt-4 text-white border-top border-white">
+        <footer class="footer col-md-12 py-3 mt-4 text-white border-top border-white">
             2025 ☞ Disclaimer: The images used on this website are not my property. All rights belong to
             Taylor
             Swift
@@ -173,9 +173,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="js/html.js?v=2.1"></script>
-    <script src="js/script.js?v=2.1"></script>
+    <script src="js/script.js?v=2.8"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/jquery.confetti.js?v=2.1"></script>
+    <script src="js/jquery.confetti.js?v=2.3"></script>
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
