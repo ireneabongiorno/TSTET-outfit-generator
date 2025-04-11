@@ -1,7 +1,7 @@
 // Copyright: https://andrybong.me
 
 /***** VARIABLES GENERALES *****/
-//document.addEventListener('contextmenu', event => event.preventDefault()); // Right click disabled
+document.addEventListener('contextmenu', event => event.preventDefault()); // Right click disabled
 
 /***** BOX INTRO *****/
 
@@ -147,7 +147,7 @@ document.querySelector(".generateButton").addEventListener("click", () => {
     document.querySelector("header h1").classList.replace("text-white", "text-black");
     document.querySelector(".logo-white").style.display = "none";
     document.querySelector("header .logo-black").style.display = "inline";
-    document.querySelector("footer").classList.replace("text-white", "text-black")
+    document.querySelector(".footer").classList.replace("text-white", "text-black")
     document.querySelector(".tabCanvas").classList.remove("d-none"); // Show the canvas
     document.querySelector(".tabMenuContent").classList.add("d-none"); // Hide the content
 });

@@ -165,7 +165,7 @@ body {
 .tabContent .outfitsTabContent .tab-pane {
     overflow-y: auto;
     height: 70vh;
-    padding: 15px;
+    padding: 15px 30px;
 }
 
 /* PROGRESS BAR */
@@ -306,7 +306,7 @@ body {
     left: -2px;
     background-size: 400%;
     z-index: -1;
-    filter: blur(10px);
+    filter: blur(20px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
