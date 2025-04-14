@@ -1,4 +1,4 @@
-The Eras Tour Outfit Generator is a fan-made web project that allows users to relive the magic of Taylor Swift’s iconic
+<strong>The Eras Tour Outfit Generator</strong> is a fan-made web project that allows users to relive the magic of Taylor Swift’s iconic
 Eras Tour by selecting their favorite outfits and generating a personalized keepsake image.
 
 I designed and developed this interactive tool using JavaScript, Bootstrap and Canvas API, ensuring a seamless
