@@ -157,23 +157,22 @@ document.querySelector(".generateButton").addEventListener("click", () => {
 
 /*** FINAL IMAGE ***/
 function finalImage(erasCardsImg, erasLeg) {
-    const myCanvas = document.querySelector(".imgCanvas");
+    const myCanvas = document.getElementById("imgCanvas");
     const myCanvasCtx = myCanvas.getContext("2d");
     myCanvas.width = 850;
     myCanvas.height = 450;
     myCanvasCtx.clearRect(0, 0, myCanvas.width, myCanvas.height);
 
     // BG
-    const bgColor = "#ffffff";
-    myCanvasCtx.fillStyle = bgColor;
+    myCanvasCtx.fillStyle = "#ffffff";
     myCanvasCtx.fillRect(0, 0, myCanvas.width, myCanvas.height);
 
-
+    let x = 0; // Initialize x before using it
     Object.values(erasCardsImg).forEach(src => {
-        const myCanvasImgEra = new Image();
-        myCanvasImgEra.src = src;
+        const myCanvas = new Image();
+        myCanvas.src = src;
 
-        myCanvasImgEra.onload = () => {
+        myCanvas.onload = () => {
             if (src.includes("acoustic")) {
                 if (erasLeg === "firstLegID") {
                     x += 45;
@@ -242,7 +241,7 @@ function finalImage(erasCardsImg, erasLeg) {
                 }
             }
 
-            myCanvasCtx.drawImage(myCanvasImgEra, x, 164, 200, 200);
+            myCanvasCtx.drawImage(myCanvas, x, 164, 200, 200);
         }
     });
 

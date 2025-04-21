@@ -81,7 +81,7 @@
         }
 
         function SetGlobals() {
-            $('body').append('<canvas id="confettiCanvas" style="position:absolute;top:0;left:0;display:none;z-index:99;"></canvas>');
+            $('body').append('<canvas id="confettiCanvas" style="position:absolute;top:0;left:0;display:none;z-index:-1;"></canvas>');
             canvas = document.getElementById("confettiCanvas");
             ctx = canvas.getContext("2d");
             W = window.innerWidth;
@@ -195,7 +195,6 @@
                 setTimeout(() => {
                     $("#confettiCanvas").remove();
                     document.querySelector(".alert").classList.add("active", "show");
-                    document.querySelector(".btn-group.fade").classList.add("active", "show");
                 }, 500);
             }, animationDuration);
         }
