@@ -89,6 +89,8 @@ const eras = [
 		</ul>
 	</li>
 </ol><br /><br /><br />
+____________________________
+
 <i>☞ Disclaimer: The images used on this website are not my property. All rights belong to Taylor Swift and her
 	respective team. This site is a fan-made project created for entertainment and nostalgic purposes only. No copyright
 	infringement is intended. If you are the rightful owner of any content and wish for it to be removed, please contact
