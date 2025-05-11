@@ -19,7 +19,7 @@ Web Development
 Bootstrap | HTML | JavaScript | WCAG
 
 // LINKS<br/>
-<a target="_blank" target="_blank" href="http://www.tstetoutfitgenerator.website">Live preview</a>
+<a target="_blank" href="http://www.tstetoutfitgenerator.website">Live preview</a>
 
 <br/><h2>Needs</h2>
 <ul>
