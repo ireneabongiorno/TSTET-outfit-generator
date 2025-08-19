@@ -9,21 +9,21 @@ experience for fans to customize and download their own tour memories. The proje
 like image handling, dynamic DOM manipulation and user-friendly UI design.
 <br/><br/>
 This project showcases my skills in front-end development, interactivity, and user experience design, while celebrating
-an unforgettable era in music history 🫶🏻✨
+an unforgettable era in music history 🫶🏻✨<br/><br/>
 
-// CLIENT<br/>
+<strong>// CLIENT</strong><br/>
 Personal Project
 
-// SERVICES<br/>
+<strong>// SERVICES</strong><br/>
 Web Development
 
-// TECHNOLOGIES<br/>
+<strong>// TECHNOLOGIES</strong><br/>
 JavaScript | Bootstrap | HTML5 | CSS3 | Git | WCAG 2.2 (Accessibility Standard)
 
-// LINKS<br/>
+<strong>// LINKS</strong><br/>
 <a target="_blank" href="https://www.tstetoutfitgenerator.website">Live preview</a>
 
-// SPECS<br/>
+<strong>// SPECS</strong><br/>
 Custom Domain | 100% Responsive | HTTPS | Fast Website
 
 <br/><h2>Needs</h2>
@@ -104,8 +104,9 @@ const eras = [
       positions based on the selected outfits and the order of the Eras, ensuring a cohesive and visually appealing
       presentation.&ZeroWidthSpace;</li>
 </ul>
+<br><br>
 ____________________________
-
+<br><br><br>
 <i>☞ Disclaimer: The images used on this website are not my property. All rights belong to Taylor Swift and her
    respective team. This site is a fan-made project created for entertainment and nostalgic purposes only. No copyright
    infringement is intended. If you are the rightful owner of any content and wish for it to be removed, please contact
