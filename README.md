@@ -1,4 +1,4 @@
-<img src="http://ireneabongiorno.com/img/portfolio/web-taylor-swift-outfits-tstet-outfit-generator/hero.webp"/>
+<img src="http://ireneabongiorno.com/img/portfolio/web-taylor-swift-outfits-tstet-outfit-generator/cover.webp"/>
 
 <h1>About the project</h1>
 The Eras Tour Outfit Generator is a fan-made web project that allows users to relive the magic of Taylor Swift’s iconic
