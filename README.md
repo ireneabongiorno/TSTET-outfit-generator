@@ -3,11 +3,11 @@
 <h1>About the project</h1>
 The Eras Tour Outfit Generator is a fan-made web project that allows users to relive the magic of Taylor Swift’s iconic
 TS Eras Tour by selecting their favorite outfits and generating a personalized keepsake image.
-
+<br/>
 I designed and developed this interactive tool using JavaScript, Bootstrap and Canvas API, ensuring a seamless
 experience for fans to customize and download their own tour memories. The project also tackles technical challenges
 like image handling, dynamic DOM manipulation and user-friendly UI design.
-
+<br/>
 This project showcases my skills in front-end development, interactivity, and user experience design, while celebrating
 an unforgettable era in music history 🫶🏻✨
 
@@ -18,10 +18,13 @@ Personal Project
 Web Development
 
 // TECHNOLOGIES<br/>
-Bootstrap | HTML | JavaScript | WCAG
+JavaScript | Bootstrap | HTML5 | CSS3 | Git | WCAG 2.2 (Accessibility Standard)
 
 // LINKS<br/>
 <a target="_blank" href="https://www.tstetoutfitgenerator.website">Live preview</a>
+
+// SPECS<br/>
+Custom Domain | 100% Responsive | HTTPS | Fast Website
 
 <br/><h2>Needs</h2>
 <ul>
