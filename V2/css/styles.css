@@ -41,8 +41,7 @@
 /* BUTTONS */
 .btn {
     border-radius: 10em !important;
-    min-width: 200px;
-    max-width: 200px;
+    max-width: 250px;
 }
 
 hr {
@@ -346,6 +345,10 @@ body {
 
 /***** MEDIA QUERIES *****/
 @media only screen and (max-width: 430px) {
+    .btn {
+        max-width: initial !important;
+    }
+    
     .tabContent {
         padding: 0 !important;
     }
