@@ -193,7 +193,6 @@
                 canvas.style.opacity = "0";
 
                 setTimeout(() => {
-                    $("#confettiCanvas").remove();
                     document.querySelector(".alert").classList.add("active", "show");
                 }, 500);
             }, animationDuration);
