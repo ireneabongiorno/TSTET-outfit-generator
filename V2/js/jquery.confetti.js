@@ -16,7 +16,7 @@
         var deactivationTimerHandler;
         var reactivationTimerHandler;
         var animationHandler;
-        var animationDuration = 5000;
+        var animationDuration = 50000;
 
         // objects
 
@@ -190,12 +190,8 @@
             })();
 
             setTimeout(() => {
-                canvas.style.opacity = "0";
-
-                setTimeout(() => {
-                    document.querySelector(".alert").classList.add("active", "show");
-                }, 500);
-            }, animationDuration);
+                document.querySelector(".alert").classList.add("active", "show");
+            }, 500);
         }
 
         function ClearTimers() {
