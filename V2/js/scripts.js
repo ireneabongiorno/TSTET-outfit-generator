@@ -8,7 +8,7 @@ document.addEventListener('contextmenu', event => event.preventDefault()); // Ri
 /*** INTRO BUTTONS ***/
 function introButton() {
     document.querySelector(".introTabContent").classList.add("d-none"); // Hide the intro
-    document.querySelector(".tabMenuContent").classList.remove("d-none"); // Show the content
+    document.querySelector(".tabMenuContent").classList.replace("d-none", "show"); // Show the content
 }
 ["firstLegOrder", "lastLegOrder"].forEach(erasLegButton => {
     document.getElementById(erasLegButton).addEventListener("click", () => {
@@ -42,8 +42,8 @@ function generateHTML(erasLeg) {
             // MENU ERAS
             const tabMenuUlLiButton = document.querySelector(".tabMenu .nav .nav-link");
             tabMenuUlLiButton.classList.add("active");
+            tabMenuUlLiButton.classList.remove("d-none");
             tabMenuUlLiButton.setAttribute("aria-selected", "true");
-            tabMenuUlLiButton.style.display = "block";
 
             // CONTENT ERAS
             const erasTabs = document.querySelector(".outfitsTabContent .tab-pane");
@@ -121,8 +121,8 @@ function nextEra() {
         activeNavLinks.classList.remove("active");
         activeNavLinks.nextElementSibling.setAttribute("aria-selected", "true");
         activeNavLinks.setAttribute("aria-selected", "false");
-        activeNavLinks.nextElementSibling.style.display = "block";
-        activeNavLinks.style.pointerEvents = "all";
+        activeNavLinks.nextElementSibling.classList.remove("d-none");
+        activeNavLinks.classList.remove("pe-none");
         activeNavLinks.querySelector("img").style.filter = "grayscale(0)";
     }
 
@@ -145,10 +145,10 @@ function nextEra() {
 /*** GENERATE BUTTON ***/
 document.querySelector(".generateButton").addEventListener("click", () => {
     document.querySelector("header h1").classList.replace("text-white", "text-black");
-    document.querySelector(".logo-white").style.display = "none";
-    document.querySelector("header .logo-black").style.display = "inline";
+    document.querySelector(".logo-white").classList.add("d-none");
+    document.querySelector("header .logo-black").classList.replace("d-none", "d-inline");
     document.querySelector(".footer").classList.replace("text-white", "text-black")
-    document.querySelector(".tabCanvas").classList.remove("d-none"); // Show the canvas
+    document.querySelector(".tabCanvas").classList.replace("d-none", "show"); // Show the canvas
     document.querySelector(".tabMenuContent").classList.add("d-none"); // Hide the content
 });
 

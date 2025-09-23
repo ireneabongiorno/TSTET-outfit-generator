@@ -12,7 +12,7 @@ function createEraHTML(era, erasLeg) {
 
     // BUTTON
     const tabMenuUlLiButton = document.createElement("button");
-    tabMenuUlLiButton.classList.add("nav-link", "p-0");
+    tabMenuUlLiButton.classList.add("nav-link", "p-0", "d-none");
     tabMenuUlLiButton.id = `era-${era.name.replace(" ", "-").toLowerCase()}-button`;
     tabMenuUlLiButton.setAttribute("data-bs-toggle", "pill");
     tabMenuUlLiButton.setAttribute("data-bs-target", `#era-${era.name.replace(" ", "-").toLowerCase()}-tab`);
@@ -20,8 +20,7 @@ function createEraHTML(era, erasLeg) {
     tabMenuUlLiButton.setAttribute("role", "tab");
     tabMenuUlLiButton.setAttribute("aria-controls", `era-${era.name.replace(" ", "-").toLowerCase()}`);
     tabMenuUlLiButton.setAttribute("aria-selected", "false");
-    tabMenuUlLiButton.style.display = "none";
-    tabMenuUlLiButton.style.pointerEvents = "none";
+    tabMenuUlLiButton.classList.add("pe-none");
     tabMenuUl.appendChild(tabMenuUlLiButton);
 
     // IMG
@@ -67,7 +66,7 @@ function createEraHTML(era, erasLeg) {
 
         //  TITULOS
         const tprccCardHeader = document.createElement("div");
-        tprccCardHeader.classList.add("card-header");
+        tprccCardHeader.classList.add("card-header", "text-truncate");
         tprccCardHeader.innerText = `${outfit}`;
         tprcCard.appendChild(tprccCardHeader);
 

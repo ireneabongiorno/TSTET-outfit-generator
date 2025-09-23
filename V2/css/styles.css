@@ -33,7 +33,9 @@
     --ts-ttpd: #9E958B;
     --ts-ttpd-2: #EEEDEB;
     --ts-ttpd-3: #FFFFFF;
-    --bs-body-font-family:
+    --bs-border-width: 0.15em;
+    --bs-border-radius: 1.25em;
+    --bs-nav-pills-link-active-bg: transparent;
 }
 
 /***** GENERAL STYLES *****/
@@ -41,7 +43,9 @@
 /* BUTTONS */
 .btn {
     border-radius: 10em !important;
+    min-width: 200px;
     max-width: 250px;
+    font-family: 'NHD-Bold', sans-serif !important;
 }
 
 hr {
@@ -49,15 +53,32 @@ hr {
 }
 
 /* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
 @font-face {
-    font-family: TaylorSwiftHandwriting;
-    src: url(../fonts/Taylor-Swift-Handwriting.ttf);
+    font-family: 'TS-handwriting';
+    src: url(../fonts/Taylor-Swift-handwriting.woff) format('woff'),
+         url(../fonts/Taylor-Swift-handwriting.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NHD-Light';
+    src: url(../fonts/NeueHaasDisplay-Light.woff) format('woff'),
+         url(../fonts/NeueHaasDisplay-Light.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NHD-Bold';
+    src: url(../fonts/NeueHaasDisplay-Medium.woff) format('woff'),
+         url(../fonts/NeueHaasDisplay-Medium.woff2) format('woff2');
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
-    --bs-body-font-family: 'Lato', sans-serif;
+    --bs-body-font-family: 'NHD-Light', sans-serif !important;
+    font-size: 20px !important;
+    letter-spacing: 0.03em;
 }
 
 /* HEADINGS */
@@ -67,7 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'TaylorSwiftHandwriting', 'Lato', sans-serif !important;
+    font-family: 'TS-handwriting', 'NHD-Bold', sans-serif !important;
 }
 
 /* GRADIENT BG */
@@ -129,15 +150,7 @@ body {
 /***** SPECIFIC CSS *****/
 
 /*** CONTENT ERAS ***/
-.tabMenuContent {
-    padding: 3em;
-}
-
 /* ERAS MENU */
-.tabMenu {
-    padding-left: 0 !important;
-}
-
 .tabMenu .nav-pills .nav-link img {
     max-width: 200px;
 }
@@ -149,6 +162,7 @@ body {
 
 .tabMenu .nav-pills .nav-link {
     transition: all 0.5s ease;
+    height: 60px;
 }
 
 .tabMenu .nav-pills .nav-link:hover {
@@ -162,9 +176,7 @@ body {
 }
 
 .tabContent .outfitsTabContent .tab-pane {
-    overflow-y: auto;
-    height: 90vh;
-    padding: 15px 30px;
+    padding: 15px 15px 15px 30px;
 }
 
 /* PROGRESS BAR */
@@ -175,9 +187,8 @@ body {
 
 /* CARDS */
 .tabContent .outfitsTabContent .card {
-    border-width: 0.15em;
-    border-radius: 1.25em;
     cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
 .tabContent .outfitsTabContent .card img {
@@ -187,31 +198,15 @@ body {
 
 .tabContent .outfitsTabContent .card .card-img-body {
     width: 100%;
-    height: 200px;
+    height: 240px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-.tabContent .outfitsTabContent .card-header {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-bottom: 20px;
 }
 
 .tabContent .outfitsTabContent .card-header:first-child {
     border-radius: 1.25em 1.25em 0 0;
-}
-
-.tabContent .outfitsTabContent .col .card,
-.tabContent .outfitsTabContent .col .card {
-    cursor: pointer;
-    transition: transform 0.5s ease;
-}
-
-.tabContent .outfitsTabContent .col:hover .card,
-.tabContent .outfitsTabContent .col.selected .card {
-    transform: scale(1.02);
 }
 
 /* ERAS COLOR HOVER CARDS */
@@ -346,9 +341,9 @@ body {
 /***** MEDIA QUERIES *****/
 @media only screen and (max-width: 430px) {
     .btn {
-        max-width: initial !important;
+        min-width: 100%;
     }
-    
+
     .tabContent {
         padding: 0 !important;
     }
@@ -356,12 +351,6 @@ body {
     /* ERAS MENU */
     .tabMenu {
         display: none;
-        position: fixed;
-        bottom: 0;
-        z-index: 99;
-        background: #FFFFFF;
-        padding: 20px 0 !important;
-        margin: 0 !important;
     }
 
     .tabMenu .nav {
@@ -378,6 +367,7 @@ body {
         padding: 0 0 40px 0 !important;
         overflow: hidden;
         justify-content: center;
+        height: 90vh;
     }
 
     .tabMenuContent hr {
@@ -389,7 +379,8 @@ body {
     }
 
     .tabContent .outfitsTabContent .tab-pane {
-        height: 61vh;
+        height: 80vh;
+        overflow: scroll;
         padding: 25px 40px 45px 45px;
     }
 
@@ -400,7 +391,9 @@ body {
 
     /*** GENERATE BUTTON ***/
     .tabGenerateButton {
-        margin: 0;
+        padding: 20px !important;
+        position: fixed;
+        bottom: 0px;
     }
 
     .tabGenerateButton>.d-flex {
