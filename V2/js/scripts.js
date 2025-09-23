@@ -147,7 +147,7 @@ document.querySelector(".generateButton").addEventListener("click", () => {
     document.querySelector("header h1").classList.replace("text-white", "text-black");
     document.querySelector(".logo-white").classList.add("d-none");
     document.querySelector("header .logo-black").classList.replace("d-none", "d-inline");
-    document.querySelector(".footer").classList.replace("text-white", "text-black")
+    document.querySelector(".footer p").classList.replace("text-white", "text-black")
     document.querySelector(".tabCanvas").classList.replace("d-none", "show"); // Show the canvas
     document.querySelector(".tabMenuContent").classList.add("d-none"); // Hide the content
 });
