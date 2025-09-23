@@ -16,7 +16,7 @@
         var deactivationTimerHandler;
         var reactivationTimerHandler;
         var animationHandler;
-        var animationDuration = 5000;
+        var animationDuration = 50000;
 
         // objects
 
