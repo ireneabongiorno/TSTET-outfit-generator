@@ -67,8 +67,8 @@ Custom Domain | 100% Responsive | HTTPS | Fast Website
 <ul>
    <li><strong>Data management</strong><br>
       Store all relevant details—including Era ID, Era name, Era leg ID, and associated outfits—within a structured
-      JavaScript object.&ZeroWidthSpace; This centralizes the data, making it more manageable and
-      accessible.&ZeroWidthSpace; Example:<p></p>
+      array of objects. This centralizes the data, making it more manageable and
+      accessible. Example:<p></p>
       <pre><code>
 const eras = [
    {
@@ -86,23 +86,23 @@ const eras = [
       Filter the dataset based on the presence of the Era leg ID (whether it is undefined or contains a numerical
       value). Subsequently, sort the filtered data according to the user’s selection from the homepage buttons (First
       Leg or Second Leg). Finally, dynamically generate HTML content for each outfit corresponding to its respective Era
-      within the JavaScript object.&ZeroWidthSpace;</li>
+      within the JavaScript object.</li>
    <li><strong>Constructing HTML for each outfit</strong><br>
       Iterate over the sorted eras and their outfits to dynamically generate and insert HTML elements into the DOM.</li>
    <li><strong>User interface initialization</strong><br>
       Ensure that the menu option for the initial Era is visible upon page load and the img title appears in grayscale,
-      along with displaying the outfits associated with this first Era.&ZeroWidthSpace;</li>
+      along with displaying the outfits associated with this first Era.</li>
    <li><strong>Progress bar</strong><br>
       Only visible on mobile devices, appears to show users how far along they are in the process. The active Era
       features an animation.</li>
    <li><strong>User interaction</strong><br>
       Allow users to select only one outfit per Era, with selections dynamically updating the Canvas element to reflect
-      the chosen outfits.&ZeroWidthSpace; That selection, changes the img of the active Era (menu) from grayscale to
+      the chosen outfits. That selection, changes the img of the active Era (menu) from grayscale to
       color.</li>
    <li><strong>Canvas implementation</strong><br>
-      Implement a Canvas element that dynamically loads and draws multiple images.&ZeroWidthSpace; Adjusts each image
+      Implement a Canvas element that dynamically loads and draws multiple images. Adjusts each image
       positions based on the selected outfits and the order of the Eras, ensuring a cohesive and visually appealing
-      presentation.&ZeroWidthSpace;</li>
+      presentation.</li>
 </ul>
 <br><br>
 ____________________________
