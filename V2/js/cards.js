@@ -1,3 +1,5 @@
+// Copyright: https://ireneabongiorno.com
+
 /***** HTML *****/
 
 /*** MENU UL ***/

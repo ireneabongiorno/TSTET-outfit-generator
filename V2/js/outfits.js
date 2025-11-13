@@ -1,4 +1,4 @@
-// Copyright: https://andrybong.me
+// Copyright: https://ireneabongiorno.com
 
 const outfitsSRC = "img/ts_tet_outfits/";
 

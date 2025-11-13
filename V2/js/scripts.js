@@ -1,7 +1,7 @@
-// Copyright: https://andrybong.me
+// Copyright: https://ireneabongiorno.com
 
 /***** VARIABLES GENERALES *****/
-document.addEventListener('contextmenu', event => event.preventDefault()); // Right click disabled
+//document.addEventListener('contextmenu', event => event.preventDefault()); // Right click disabled
 
 /***** BOX INTRO *****/
 
